@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:      #FFFBF5;
+  --bg2:     #FFF6EB;
+  --card:    #FFFFFF;
+  --card2:   #FDF5EA;
+  --accent:  #C8541A;
+  --accent2: #E87040;
+  --gold:    #D4A84B;
+  --gold2:   #F0C56A;
+  --text:    #1C1208;
+  --text2:   #5C4A30;
+  --muted:   #9C8870;
+  --border:  rgba(180, 130, 80, 0.18);
+  --border2: rgba(180, 130, 80, 0.32);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif { font-family: 'Fraunces', serif; }
+.scrollbar-hide { scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.animate-fade-up  { animation: fadeUp  0.4s ease both; }
+.animate-slide-up { animation: slideUp 0.35s cubic-bezier(0.4,0,0.2,1); }
